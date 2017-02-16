@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="2BU-qf-mfB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="UsU-O9-r0y">
+            <objects>
+                <viewController id="2BU-qf-mfB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Zk-Ey-F77"/>
+                        <viewControllerLayoutGuide type="bottom" id="2xJ-Df-Qv6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oBC-e5-Bbh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Junaid KHALID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1y-kC-qqD">
+                                <rect key="frame" x="235" y="240" width="130" height="73"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.42721483859999998" blue="0.32375360759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOHNIFY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9h-nP-jEW">
+                                <rect key="frame" x="202" y="132" width="196" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="43"/>
+                                <color key="textColor" red="0.26960344759999999" green="0.57126719309999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.74248215650000005" green="0.55775660289999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="1" green="0.42721483859999998" blue="0.32375360759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="khalid_j" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLR-H7-WbV">
+                                <rect key="frame" x="230" y="385" width="141" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.6400145142" green="0.39012389809999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.63063274820000004" green="1" blue="0.52870313670000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="b1y-kC-qqD" firstAttribute="centerX" secondItem="oBC-e5-Bbh" secondAttribute="centerX" id="860-Ag-Rrq"/>
+                            <constraint firstItem="y9h-nP-jEW" firstAttribute="centerX" secondItem="oBC-e5-Bbh" secondAttribute="centerX" id="Lri-mW-aAT"/>
+                            <constraint firstItem="b1y-kC-qqD" firstAttribute="centerY" secondItem="oBC-e5-Bbh" secondAttribute="centerY" constant="-23.5" id="XXx-te-sBw"/>
+                            <constraint firstItem="nLR-H7-WbV" firstAttribute="centerY" secondItem="oBC-e5-Bbh" secondAttribute="centerY" constant="95.5" id="scm-Kw-ZMl"/>
+                            <constraint firstItem="nLR-H7-WbV" firstAttribute="centerX" secondItem="oBC-e5-Bbh" secondAttribute="centerX" id="u11-5F-sIf"/>
+                            <constraint firstItem="y9h-nP-jEW" firstAttribute="centerY" secondItem="oBC-e5-Bbh" secondAttribute="centerY" constant="-141.5" id="wqg-oq-Mwf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFN-HR-U1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="470"/>
+        </scene>
+    </scenes>
+</document>
