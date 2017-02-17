@@ -14,7 +14,10 @@ class TableViewController: UITableViewController {
     
     var img = ["chris.jpeg","soprano.jpeg","kendji.jpeg","gims.jpeg"]
     var singerName = ["Christophe Maé", "Soprano", "Kendji Girac", "Maître Gims"]
-    var singerCategory = ["Pop", "Rap", "Pop", "Rock"]
+    var singerCategory = ["Pop Music", "Rap Music", "Pop Music", "Rock Music"]
+    var singerDescription = ["Christophe Maé (born 16 October 1975 in Carpentras, Vaucluse) is a French pop singer.",
+                             "Saïd M'Roumbaba (born 14 January 1979 in Marseille, France), better known by his stage name Soprano, is a French rapper of Comorian descent.",
+                              "Kendji Girac (born Kendji Jason Maillié, July 3, 1996) is a French singer. He is the winner of the music competition The Voice: la plus belle voix ", "Gandhi Djuna (born 6 May 1986), better known by his stage name Maître Gims, is a French rapper and singer of Congolese descent."]
     
     @IBOutlet var tvSingers: UITableView!
     
@@ -78,10 +81,12 @@ class TableViewController: UITableViewController {
             let strImageSinger = img[indexPath.row]
             let strSingerName = singerName[indexPath.row]
             let strSingerCategory = singerCategory[indexPath.row]
+            let strSingerDescription = singerDescription[indexPath.row]
             detailViewController.imageName = strImageSinger
             detailViewController.title = strImageSinger
             detailViewController.singerName = strSingerName
             detailViewController.singerCategory = strSingerCategory
+            detailViewController.singerDescription = strSingerDescription
             
         }
     }

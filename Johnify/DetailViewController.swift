@@ -13,16 +13,19 @@ class DetailViewController: UIViewController {
     var imageName: String!
     var singerName: String!
     var singerCategory: String!
+    var singerDescription: String!
     @IBOutlet weak var imgDetailSinger: UIImageView!
     @IBOutlet weak var lblDetailName: UILabel!
     @IBOutlet weak var lblDetailCategory: UILabel!
-    @IBOutlet weak var lblDetailDescription: UILabel!
+    @IBOutlet weak var txtViewDescription: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imgDetailSinger?.image = UIImage(named: "\(imageName)")
         self.lblDetailName?.text = singerName
         self.lblDetailCategory?.text = singerCategory
+        self.txtViewDescription?.text = singerDescription
 
         // Do any additional setup after loading the view.
     }
