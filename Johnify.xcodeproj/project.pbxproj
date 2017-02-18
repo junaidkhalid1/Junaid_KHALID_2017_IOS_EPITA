@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		438E8D751E55596F00F25847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8D741E55596F00F25847 /* AppDelegate.swift */; };
-		438E8D771E55596F00F25847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8D761E55596F00F25847 /* ViewController.swift */; };
 		438E8D7A1E55596F00F25847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438E8D781E55596F00F25847 /* Main.storyboard */; };
 		438E8D7C1E55596F00F25847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438E8D7B1E55596F00F25847 /* Assets.xcassets */; };
 		438E8D7F1E55596F00F25847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438E8D7D1E55596F00F25847 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,7 @@
 		438E8DA51E555BF700F25847 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA41E555BF700F25847 /* Music.swift */; settings = {ASSET_TAGS = (); }; };
 		438E8DA71E556A7E00F25847 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA61E556A7E00F25847 /* TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		438E8DA91E5575C100F25847 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA81E5575C100F25847 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		438E8DAB1E58E0D700F25847 /* AddSingerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DAA1E58E0D700F25847 /* AddSingerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 /* Begin PBXFileReference section */
 		438E8D711E55596F00F25847 /* Johnify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Johnify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438E8D741E55596F00F25847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		438E8D761E55596F00F25847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		438E8D791E55596F00F25847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		438E8D7B1E55596F00F25847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438E8D7E1E55596F00F25847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		438E8DA41E555BF700F25847 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		438E8DA61E556A7E00F25847 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		438E8DA81E5575C100F25847 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		438E8DAA1E58E0D700F25847 /* AddSingerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSingerViewController.swift; path = ../AddSingerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +107,10 @@
 			children = (
 				438E8DA41E555BF700F25847 /* Music.swift */,
 				438E8D741E55596F00F25847 /* AppDelegate.swift */,
-				438E8D761E55596F00F25847 /* ViewController.swift */,
 				438E8DA21E555AEF00F25847 /* TableViewController.swift */,
 				438E8DA61E556A7E00F25847 /* TableViewCell.swift */,
 				438E8DA81E5575C100F25847 /* DetailViewController.swift */,
+				438E8DAA1E58E0D700F25847 /* AddSingerViewController.swift */,
 				438E8D781E55596F00F25847 /* Main.storyboard */,
 				438E8D7D1E55596F00F25847 /* LaunchScreen.storyboard */,
 				438E8D7B1E55596F00F25847 /* Assets.xcassets */,
@@ -270,8 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438E8DAB1E58E0D700F25847 /* AddSingerViewController.swift in Sources */,
 				438E8DA71E556A7E00F25847 /* TableViewCell.swift in Sources */,
-				438E8D771E55596F00F25847 /* ViewController.swift in Sources */,
 				438E8DA31E555AEF00F25847 /* TableViewController.swift in Sources */,
 				438E8DA91E5575C100F25847 /* DetailViewController.swift in Sources */,
 				438E8D751E55596F00F25847 /* AppDelegate.swift in Sources */,

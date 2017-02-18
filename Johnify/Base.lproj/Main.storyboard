@@ -8,7 +8,7 @@
         <!--Add Singer View Controller-->
         <scene sceneID="DCK-Ke-zg0">
             <objects>
-                <viewController title="Add Singer View Controller" id="FTK-ea-lqK" sceneMemberID="viewController">
+                <viewController title="Add Singer View Controller" id="FTK-ea-lqK" customClass="AddSingerViewController" customModule="Johnify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fQR-2r-R7b"/>
                         <viewControllerLayoutGuide type="bottom" id="2Ko-ho-VrO"/>
@@ -56,13 +56,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHT-Go-J89">
-                                <rect key="frame" x="20" y="457" width="560" height="40"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Save"/>
-                            </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yko-SF-iu6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
                                 <subviews>
@@ -104,6 +97,17 @@
                                     <constraint firstItem="GKY-f9-NMz" firstAttribute="top" secondItem="yko-SF-iu6" secondAttribute="top" constant="26" id="ol8-XE-uZ2"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHT-Go-J89">
+                                <rect key="frame" x="20" y="457" width="560" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSaveSinger:" destination="FTK-ea-lqK" eventType="touchUpInside" id="OLy-fQ-bVP"/>
+                                    <segue destination="5cP-z4-Wv7" kind="show" identifier="segueSave" id="O5s-QN-45J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,10 +149,15 @@
                             <constraint firstItem="EhA-0n-QCd" firstAttribute="top" secondItem="lEK-HQ-vCG" secondAttribute="bottom" constant="39" id="ymu-6D-5aR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tbSingerCategory" destination="t8E-k0-wG2" id="kJ5-LF-BAp"/>
+                        <outlet property="tbSingerDescription" destination="vxb-8a-meZ" id="MaU-WB-H7K"/>
+                        <outlet property="tbSingerName" destination="lEK-HQ-vCG" id="Gnp-Li-QUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFF-70-OM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="-554"/>
+            <point key="canvasLocation" x="-147" y="-364"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="mA1-Ao-8Mk">
@@ -241,7 +250,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cc9-pE-zgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-494" y="163"/>
+            <point key="canvasLocation" x="-918" y="77"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="les-7t-9Ae">
@@ -390,7 +399,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="169" y="163"/>
+            <point key="canvasLocation" x="-147" y="361"/>
         </scene>
     </scenes>
 </document>
