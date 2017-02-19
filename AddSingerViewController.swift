@@ -23,10 +23,10 @@ class AddSingerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tvSingerDescription.layer.borderColor = UIColor( red: 0, green: 0, blue: 153/255, alpha: 1.0 ).CGColor
+        tvSingerDescription.layer.borderColor = UIColor( red: 197/255, green: 198/255, blue: 201/255, alpha: 1.0 ).CGColor
         tvSingerDescription.layer.borderWidth = 2.0
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.  	197, 198, 201
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,18 +47,40 @@ class AddSingerViewController: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String,sender: AnyObject?) -> Bool {
         
-        if tbSingerName.text?.isEmpty ?? true || tbSingerCategory.text?.isEmpty ?? true || tvSingerDescription.text?.isEmpty ?? true {
-
+        if tbSingerName.text?.isEmpty ?? true || tbSingerCategory.text?.isEmpty ?? true || tvSingerDescription.text?.isEmpty ?? true  {
+            print("false")
             return false
-            
         } else{
-            return true
+            if speacialChars() ?? true {
+                print("true")
+                return true
+            } else {
+                print("false")
+                return false
+            }
         }
     }
     
+    internal func speacialChars () -> Bool {
+        
+        let name = tbSingerName.text ?? ""
+        let cat = tbSingerCategory.text ?? ""
+        let desc = tvSingerDescription.text ?? ""
+        
+        let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
+        if name.rangeOfCharacterFromSet(characterset.invertedSet) == nil && cat.rangeOfCharacterFromSet(characterset.invertedSet) == nil && desc.rangeOfCharacterFromSet(characterset.invertedSet) == nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
     internal func formValidator () ->Void {
         
-        if let text = tbSingerName.text where !text.isEmpty
+        let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
+        
+        if let text = tbSingerName.text where !text.isEmpty && text.rangeOfCharacterFromSet(characterset.invertedSet) == nil
         {
             tbSingerName.layer.borderColor = UIColor( red: 0, green: 153/255, blue: 0, alpha: 1.0 ).CGColor
             tbSingerName.layer.borderWidth = 2.0
@@ -67,7 +89,7 @@ class AddSingerViewController: UIViewController {
             tbSingerName.layer.borderWidth = 2.0
         }
         
-        if let text = tbSingerCategory.text where !text.isEmpty
+        if let text = tbSingerCategory.text where !text.isEmpty && text.rangeOfCharacterFromSet(characterset.invertedSet) == nil
         {
             tbSingerCategory.layer.borderColor = UIColor( red: 0, green: 153/255, blue: 0, alpha: 1.0 ).CGColor
             tbSingerCategory.layer.borderWidth = 2.0
@@ -76,7 +98,7 @@ class AddSingerViewController: UIViewController {
             tbSingerCategory.layer.borderWidth = 2.0
         }
         
-        if let text = tvSingerDescription.text where !text.isEmpty
+        if let text = tvSingerDescription.text where !text.isEmpty && text.rangeOfCharacterFromSet(characterset.invertedSet) == nil
         {
             tvSingerDescription.layer.borderColor = UIColor( red: 0, green: 153/255, blue: 0, alpha: 1.0 ).CGColor
             tvSingerDescription.layer.borderWidth = 2.0
