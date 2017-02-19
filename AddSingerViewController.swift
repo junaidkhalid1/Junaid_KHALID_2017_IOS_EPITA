@@ -71,7 +71,7 @@ class AddSingerViewController: UIViewController {
         let cat = tbSingerCategory.text ?? ""
         let desc = tvSingerDescription.text ?? ""
         
-        let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
+        let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789 ")
         if name.rangeOfCharacterFromSet(characterset.invertedSet) == nil && cat.rangeOfCharacterFromSet(characterset.invertedSet) == nil && desc.rangeOfCharacterFromSet(characterset.invertedSet) == nil {
             return true
         } else {
@@ -86,7 +86,7 @@ class AddSingerViewController: UIViewController {
     */
     internal func formValidator () ->Void {
         
-        let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
+        let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789 ")
         
         if let text = tbSingerName.text where !text.isEmpty && text.rangeOfCharacterFromSet(characterset.invertedSet) == nil
         {
