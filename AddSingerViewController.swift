@@ -50,8 +50,7 @@ class AddSingerViewController: UIViewController {
         }
     }
     
-    @IBAction func btnSaveSinger(sender: AnyObject) {
-
+    func formValidator () ->Void {
         
         if let text = tbSingerName.text where !text.isEmpty
         {
@@ -79,6 +78,11 @@ class AddSingerViewController: UIViewController {
             tbSingerDescription.layer.borderColor = UIColor( red: 153/255, green: 0, blue: 0, alpha: 1.0 ).CGColor
             tbSingerDescription.layer.borderWidth = 2.0
         }
+    }
+    
+    @IBAction func btnSaveSinger(sender: AnyObject) {
+        
+        formValidator()
         
     }
 
