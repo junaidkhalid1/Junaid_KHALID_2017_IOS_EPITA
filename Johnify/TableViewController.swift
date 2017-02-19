@@ -10,10 +10,13 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    // Declare variable for Default Image
     var imageDefault = "nrj.jpeg"
     
+    // Declare constant for Table View Cell
     let cellIdentifiers = "TableViewController"
     
+    // Declare variables for Images, Name, Category, Description and assigned values to them
     var img = ["chris.jpeg","soprano.jpeg","kendji.jpeg","gims.jpeg"]
     var singerName = ["Christophe Maé", "Soprano", "Kendji Girac", "Maître Gims"]
     var singerCategory = ["Pop Music", "Rap Music", "Pop Music", "Rock Music"]
@@ -21,6 +24,7 @@ class TableViewController: UITableViewController {
                              "Saïd M'Roumbaba (born 14 January 1979 in Marseille, France), better known by his stage name Soprano, is a French rapper of Comorian descent.",
                               "Kendji Girac (born Kendji Jason Maillié, July 3, 1996) is a French singer. He is the winner of the music competition The Voice: la plus belle voix ", "Gandhi Djuna (born 6 May 1986), better known by his stage name Maître Gims, is a French rapper and singer of Congolese descent."]
     
+    // Table View decleration
     @IBOutlet var tvSingers: UITableView!
     
     override func viewDidLoad() {
@@ -55,6 +59,7 @@ class TableViewController: UITableViewController {
     }
     
     
+    // This funtion is handling proptotpe cells: TableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
@@ -73,6 +78,7 @@ class TableViewController: UITableViewController {
         return cell as TableViewCell
     }
     
+    // Segue funtion to pass data to Detail View Controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "detailSegue"
@@ -83,15 +89,16 @@ class TableViewController: UITableViewController {
             let strSingerName = singerName[indexPath.row]
             let strSingerCategory = singerCategory[indexPath.row]
             let strSingerDescription = singerDescription[indexPath.row]
+            
             detailViewController.imageName = strImageSinger
             detailViewController.title = strImageSinger
             detailViewController.singerName = strSingerName
             detailViewController.singerCategory = strSingerCategory
             detailViewController.singerDescription = strSingerDescription
-            
         }
     }
     
+    // Unwind Segue funtion for addition of data in Table View coming from AddSingerViewController
     @IBAction func done(segue:UIStoryboardSegue) {
         
         let AddSingerVC = segue.sourceViewController as! AddSingerViewController

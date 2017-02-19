@@ -10,10 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    // Variables to hold values coming from TableViewController function "prepareForSegue"
     var imageName: String!
     var singerName: String!
     var singerCategory: String!
     var singerDescription: String!
+    
     @IBOutlet weak var imgDetailSinger: UIImageView!
     @IBOutlet weak var lblDetailName: UILabel!
     @IBOutlet weak var lblDetailCategory: UILabel!
@@ -35,6 +37,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Back button implementation
     @IBAction func btnBack(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }

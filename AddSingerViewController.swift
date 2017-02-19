@@ -10,6 +10,7 @@ import UIKit
 
 class AddSingerViewController: UIViewController {
     
+    // Variables to hold new singer name, category and description
     var nameAdded:String! = ""
     var categoryAdded:String! = ""
     var descriptionAdded:String! = ""
@@ -23,6 +24,7 @@ class AddSingerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Drawing borderline for multiline textbox which is textView
         tvSingerDescription.layer.borderColor = UIColor( red: 197/255, green: 198/255, blue: 201/255, alpha: 1.0 ).CGColor
         tvSingerDescription.layer.borderWidth = 2.0
 
@@ -45,6 +47,7 @@ class AddSingerViewController: UIViewController {
     }
     */
     
+    // This function triggers segue only and only if form fields are not empty and does not contain any special characters
     override func shouldPerformSegueWithIdentifier(identifier: String,sender: AnyObject?) -> Bool {
         
         if tbSingerName.text?.isEmpty ?? true || tbSingerCategory.text?.isEmpty ?? true || tvSingerDescription.text?.isEmpty ?? true  {
@@ -61,6 +64,7 @@ class AddSingerViewController: UIViewController {
         }
     }
     
+    // This funtion is handling specail characters
     internal func speacialChars () -> Bool {
         
         let name = tbSingerName.text ?? ""
@@ -75,7 +79,11 @@ class AddSingerViewController: UIViewController {
         }
     }
     
-    
+    /*
+    // This function is changing fields border colors
+    // If fields are empty and contain any special characters fields border color will turn into red
+    // If fields are not empty and does not contain any special character fields boreder color will turn into green
+    */
     internal func formValidator () ->Void {
         
         let characterset = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ0123456789")
@@ -108,12 +116,14 @@ class AddSingerViewController: UIViewController {
         }
     }
     
+    // Save button action is invloking fuction "formValidator"
     @IBAction func btnSaveSinger(sender: AnyObject) {
         
         formValidator()
         
     }
     
+    // This function is passing new data to table view using segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segueDone") {
             nameAdded = tbSingerName.text
@@ -122,6 +132,7 @@ class AddSingerViewController: UIViewController {
         }
     }
 
+    // Back button implementation
     @IBAction func btnBack(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
