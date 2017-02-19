@@ -14,7 +14,6 @@
 		438E8D8A1E55596F00F25847 /* JohnifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8D891E55596F00F25847 /* JohnifyTests.swift */; };
 		438E8D951E55596F00F25847 /* JohnifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8D941E55596F00F25847 /* JohnifyUITests.swift */; };
 		438E8DA31E555AEF00F25847 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA21E555AEF00F25847 /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		438E8DA51E555BF700F25847 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA41E555BF700F25847 /* Music.swift */; settings = {ASSET_TAGS = (); }; };
 		438E8DA71E556A7E00F25847 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA61E556A7E00F25847 /* TableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		438E8DA91E5575C100F25847 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DA81E5575C100F25847 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		438E8DAB1E58E0D700F25847 /* AddSingerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438E8DAA1E58E0D700F25847 /* AddSingerViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -51,7 +50,6 @@
 		438E8D941E55596F00F25847 /* JohnifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnifyUITests.swift; sourceTree = "<group>"; };
 		438E8D961E55596F00F25847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438E8DA21E555AEF00F25847 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		438E8DA41E555BF700F25847 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		438E8DA61E556A7E00F25847 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		438E8DA81E5575C100F25847 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		438E8DAA1E58E0D700F25847 /* AddSingerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSingerViewController.swift; path = ../AddSingerViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 		438E8D731E55596F00F25847 /* Johnify */ = {
 			isa = PBXGroup;
 			children = (
-				438E8DA41E555BF700F25847 /* Music.swift */,
 				438E8D741E55596F00F25847 /* AppDelegate.swift */,
 				438E8DA21E555AEF00F25847 /* TableViewController.swift */,
 				438E8DA61E556A7E00F25847 /* TableViewCell.swift */,
@@ -275,7 +272,6 @@
 				438E8DA31E555AEF00F25847 /* TableViewController.swift in Sources */,
 				438E8DA91E5575C100F25847 /* DetailViewController.swift in Sources */,
 				438E8D751E55596F00F25847 /* AppDelegate.swift in Sources */,
-				438E8DA51E555BF700F25847 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

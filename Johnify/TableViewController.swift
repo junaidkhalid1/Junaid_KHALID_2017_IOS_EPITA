@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    var imageDefault = "nrj.jpeg"
+    
     let cellIdentifiers = "TableViewController"
     
     var img = ["chris.jpeg","soprano.jpeg","kendji.jpeg","gims.jpeg"]
@@ -21,14 +23,12 @@ class TableViewController: UITableViewController {
     
     @IBOutlet var tvSingers: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if UIScreen.mainScreen().bounds.size.height>768
         {
             tvSingers?.rowHeight=100;
         }
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -57,6 +57,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        
         var cell : TableViewCell! = tableView.dequeueReusableCellWithIdentifier("cell") as! TableViewCell
         if(cell == nil)
         {
@@ -89,6 +90,22 @@ class TableViewController: UITableViewController {
             detailViewController.singerDescription = strSingerDescription
             
         }
+    }
+    
+    @IBAction func done(segue:UIStoryboardSegue) {
+        
+        let AddSingerVC = segue.sourceViewController as! AddSingerViewController
+        let newSingerName = AddSingerVC.nameAdded
+        let newSingerCategory = AddSingerVC.categoryAdded
+        let newSingerDesscription = AddSingerVC.descriptionAdded
+        
+        img.append(imageDefault)
+        singerName.append(newSingerName)
+        singerCategory.append(newSingerCategory)
+        singerDescription.append(newSingerDesscription)
+        
+        self.tableView.reloadData()
+        
     }
     
     

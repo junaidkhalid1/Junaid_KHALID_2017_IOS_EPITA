@@ -10,15 +10,21 @@ import UIKit
 
 class AddSingerViewController: UIViewController {
     
+    var nameAdded:String! = ""
+    var categoryAdded:String! = ""
+    var descriptionAdded:String! = ""
 
     @IBOutlet weak var tbSingerName: UITextField!
     @IBOutlet weak var tbSingerCategory: UITextField!
-    @IBOutlet weak var tbSingerDescription: UITextField!
+    @IBOutlet weak var tvSingerDescription: UITextView!
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tvSingerDescription.layer.borderColor = UIColor( red: 0, green: 0, blue: 153/255, alpha: 1.0 ).CGColor
+        tvSingerDescription.layer.borderWidth = 2.0
 
         // Do any additional setup after loading the view.
     }
@@ -41,7 +47,7 @@ class AddSingerViewController: UIViewController {
     
     override func shouldPerformSegueWithIdentifier(identifier: String,sender: AnyObject?) -> Bool {
         
-        if tbSingerName.text?.isEmpty ?? true || tbSingerCategory.text?.isEmpty ?? true || tbSingerDescription.text?.isEmpty ?? true {
+        if tbSingerName.text?.isEmpty ?? true || tbSingerCategory.text?.isEmpty ?? true || tvSingerDescription.text?.isEmpty ?? true {
 
             return false
             
@@ -50,7 +56,7 @@ class AddSingerViewController: UIViewController {
         }
     }
     
-    func formValidator () ->Void {
+    internal func formValidator () ->Void {
         
         if let text = tbSingerName.text where !text.isEmpty
         {
@@ -70,13 +76,13 @@ class AddSingerViewController: UIViewController {
             tbSingerCategory.layer.borderWidth = 2.0
         }
         
-        if let text = tbSingerDescription.text where !text.isEmpty
+        if let text = tvSingerDescription.text where !text.isEmpty
         {
-            tbSingerDescription.layer.borderColor = UIColor( red: 0, green: 153/255, blue: 0, alpha: 1.0 ).CGColor
-            tbSingerDescription.layer.borderWidth = 2.0
+            tvSingerDescription.layer.borderColor = UIColor( red: 0, green: 153/255, blue: 0, alpha: 1.0 ).CGColor
+            tvSingerDescription.layer.borderWidth = 2.0
         } else {
-            tbSingerDescription.layer.borderColor = UIColor( red: 153/255, green: 0, blue: 0, alpha: 1.0 ).CGColor
-            tbSingerDescription.layer.borderWidth = 2.0
+            tvSingerDescription.layer.borderColor = UIColor( red: 153/255, green: 0, blue: 0, alpha: 1.0 ).CGColor
+            tvSingerDescription.layer.borderWidth = 2.0
         }
     }
     
@@ -85,5 +91,40 @@ class AddSingerViewController: UIViewController {
         formValidator()
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "segueDone") {
+            nameAdded = tbSingerName.text
+            categoryAdded = tbSingerCategory.text
+            descriptionAdded = tvSingerDescription.text
+        }
+    }
 
+    @IBAction func btnBack(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
